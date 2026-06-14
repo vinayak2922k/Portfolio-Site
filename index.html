@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinayak Sharma - Portfolio</title>
+    <meta name="description" content="Portfolio of Vinayak Sharma - Computer Science Student, Web Developer, and Software Testing Intern.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Animated Background -->
+    <div class="bg-animated">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">VS</div>
+        <ul class="nav-links">
+            <li><a href="#landing">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <!-- PAGE 1 - LANDING -->
+        <section id="landing" class="section landing">
+            <div class="container landing-content">
+                <div class="landing-text-col">
+                    <h1 class="landing-title">Hello, I Am<br>Vinayak Sharma</h1>
+                    <p class="landing-intro">
+                        Vinayak Sharma is a passionate Computer Science Engineering student with a strong
+                        foundation in web development, software testing, and modern backend technologies.
+                        With hands-on experience as a Software Testing Intern at Wurkify and an active
+                        role as GeeksforGeeks Campus Mantri, he brings both technical precision and
+                        community leadership to every project he undertakes. His expertise spans React.js,
+                        FastAPI, MongoDB, and core CS fundamentals, backed by certifications from Google
+                        for Developers and leading EdTech platforms. Vinayak has built real-world
+                        applications ranging from healthcare prescription management systems to
+                        event-internship platforms — each engineered to create tangible impact. Driven by
+                        curiosity and a commitment to continuous learning, he is on a mission to build
+                        solutions that truly matter. Explore his work below — let's create something
+                        extraordinary together.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-view-work">View Work</a>
+                        <a href="#about" class="btn btn-play-circle"><i class="fas fa-play"></i></a>
+                    </div>
+                </div>
+                <div class="landing-img-col">
+                    <div class="arch-image-container">
+                        <img src="profile_photo.jpg.jpeg" alt="Vinayak Sharma" class="arch-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2 - ABOUT ME -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-left hidden">
+                        <div class="view-work-buttons" style="margin-top: 0;">
+                            <a href="#experience" class="work-link">Work Experience</a>
+                            <a href="#education" class="work-link">Education</a>
+                            <a href="#projects" class="work-link">Projects</a>
+                            <a href="#skills" class="work-link">Skills</a>
+                            <a href="#certifications" class="work-link">Certifications</a>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <p class="about-summary hidden">
+                            Vinayak Sharma is a second-year B.Tech Computer Science & Engineering student at
+                            Modern Institute of Technology and Research Centre, Alwar, maintaining a strong
+                            CGPA of 8.37. He has built hands-on expertise in full-stack web development —
+                            working with React.js on the frontend and FastAPI with MongoDB on the backend —
+                            alongside deep core CS skills in DSA, DBMS, and Object-Oriented Programming.
+                            During his internship at Wurkify, he performed rigorous manual testing, executed
+                            comprehensive test cases, and applied SDLC/STLC methodologies to deliver quality
+                            software outcomes. As a GeeksforGeeks Campus Mantri, he has inspired peers to
+                            embrace coding culture and problem-solving through daily challenges and community
+                            events. Seven certifications — spanning React.js, JavaScript, Generative AI, and
+                            AI Agent Building — reflect his unwavering commitment to staying at the cutting
+                            edge of technology. Beyond code, Vinayak's leadership, public speaking, and event
+                            management skills make him a collaborative force in any team he joins.
+                        </p>
+                        <div class="mission-vision">
+                            <div class="mv-card mission-card hidden">
+                                <h3><i class="fas fa-bullseye"></i> Mission</h3>
+                                <p>To leverage technology and continuous learning to build impactful, user-centric solutions that solve real-world problems and inspire the next generation of developers.</p>
+                            </div>
+                            <div class="mv-card vision-card hidden">
+                                <h3><i class="fas fa-eye"></i> Vision</h3>
+                                <p>To grow into a full-stack engineer and tech community leader who bridges the gap between innovation and implementation — creating software that makes a meaningful difference in people's lives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3 - WORK EXPERIENCE -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="experience-timeline">
+                    <!-- ROLE 1 -->
+                    <div class="exp-card hidden left-align">
+                        <div class="exp-panel-dark">
+                            <h3>Software Testing Intern</h3>
+                            <span class="company"><i class="fas fa-building"></i> Wurkify</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                            <span class="duration"><i class="far fa-calendar-alt"></i> Aug 2025 – Nov 2025</span>
+                            <span class="badge">Internship</span>
+                        </div>
+                        <div class="exp-content">
+                            <h4>Key Responsibilities</h4>
+                            <ul>
+                                <li>Performed manual testing to identify UI and functional defects across live web applications, ensuring a seamless end-user experience</li>
+                                <li>Designed and executed structured test cases covering functional, regression, and edge-case scenarios across multiple application modules</li>
+                                <li>Documented and reported bugs using structured documentation practices, enabling efficient and reproducible developer handoffs</li>
+                                <li>Applied SDLC and STLC methodologies and collaborated cross-functionally with developers for timely and accurate issue resolution</li>
+                            </ul>
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li>Improved defect detection coverage through systematic test case design spanning multiple application modules and user flows</li>
+                                <li>Delivered clear, reproducible bug reports that streamlined developer resolution cycles and reduced back-and-forth communication</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ROLE 2 -->
+                    <div class="exp-card hidden right-align">
+                        <div class="exp-panel-dark">
+                            <h3>Campus Mantri</h3>
+                            <span class="company"><i class="fas fa-building"></i> GeeksforGeeks</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Alwar, Rajasthan, India</span>
+                            <span class="duration"><i class="far fa-calendar-alt"></i> 2024 – Present</span>
+                            <span class="badge">Campus Ambassador</span>
+                        </div>
+                        <div class="exp-content">
+                            <h4>Key Responsibilities</h4>
+                            <ul>
+                                <li>Promoted DSA and competitive coding culture among fellow students on campus, building awareness of practical problem-solving skills</li>
+                                <li>Actively participated in and encouraged the daily Problem of the Day (POTD) initiative to maintain consistent practice among peers</li>
+                                <li>Organized coding awareness activities, workshops, and student engagement events for the GFG campus community</li>
+                                <li>Represented GeeksforGeeks as an official campus point-of-contact, demonstrating leadership, communication, and coordination capabilities</li>
+                            </ul>
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li>Grew campus coding community participation through consistent event organization and peer mentorship initiatives</li>
+                                <li>Earned the official GeeksforGeeks Campus Mantri Certificate in recognition of outstanding campus representation and community building</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4 - EDUCATION -->
+        <section id="education" class="section education">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="edu-grid">
+                    <!-- DEGREE 1 -->
+                    <div class="edu-card hidden top-drop">
+                        <div class="edu-header">
+                            <i class="fas fa-graduation-cap edu-icon"></i>
+                            <div class="edu-title-wrapper">
+                                <h3>Bachelor of Technology – Computer Science & Engineering</h3>
+                                <span class="institution">Modern Institute of Technology and Research Centre (MITRC)</span>
+                            </div>
+                        </div>
+                        <div class="edu-meta">
+                            <span><i class="far fa-calendar-alt"></i> Aug 2024 – May 2028</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Alwar, India</span>
+                            <span class="score">CGPA: 8.37</span>
+                        </div>
+                        <ul class="edu-highlights">
+                            <li>Core specializations in Data Structures & Algorithms, Database Management Systems, and Object-Oriented Programming</li>
+                            <li>Active campus leader as GeeksforGeeks Campus Mantri, driving inter-college coding culture and student engagement initiatives</li>
+                            <li>Practical full-stack project experience spanning React.js frontends, FastAPI backends, and MongoDB databases</li>
+                        </ul>
+                    </div>
+                    <!-- DEGREE 2 -->
+                    <div class="edu-card hidden bottom-rise">
+                        <div class="edu-header">
+                            <i class="fas fa-graduation-cap edu-icon"></i>
+                            <div class="edu-title-wrapper">
+                                <h3>Class XII – Science Stream (PCM)</h3>
+                                <span class="institution">National Academy Sr. Secondary Public School</span>
+                            </div>
+                        </div>
+                        <div class="edu-meta">
+                            <span><i class="far fa-calendar-alt"></i> Apr 2021 – Jun 2022</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Alwar, India</span>
+                            <span class="score">66%</span>
+                        </div>
+                        <ul class="edu-highlights">
+                            <li>Studied Physics, Chemistry, and Mathematics as core subjects, building a strong analytical and logical reasoning foundation</li>
+                            <li>Developed early interest in computing and technology during secondary education</li>
+                            <li>Built discipline and study habits that underpin current academic performance</li>
+                        </ul>
+                    </div>
+                    <!-- DEGREE 3 -->
+                    <div class="edu-card hidden bottom-rise delay">
+                        <div class="edu-header">
+                            <i class="fas fa-graduation-cap edu-icon"></i>
+                            <div class="edu-title-wrapper">
+                                <h3>Class X</h3>
+                                <span class="institution">Adinath Senior Secondary School</span>
+                            </div>
+                        </div>
+                        <div class="edu-meta">
+                            <span><i class="far fa-calendar-alt"></i> Apr 2023 – Jun 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Alwar, India</span>
+                            <span class="score">81.6%</span>
+                        </div>
+                        <ul class="edu-highlights">
+                            <li>Achieved 81.6% with strong performance across core subjects</li>
+                            <li>Developed foundational skills in Mathematics and Science</li>
+                            <li>Cultivated time management and academic consistency from an early stage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5 - PROJECTS -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-list">
+                    <!-- PROJECT 1 -->
+                    <div class="project-card hidden">
+                        <div class="proj-panel-dark">
+                            <h3>To-Do List Web App</h3>
+                            <span class="proj-type">Personal Project</span>
+                            <span class="proj-duration">2024</span>
+                            <div class="tech-pills">
+                                <span>React.JS</span><span>JavaScript</span><span>HTML</span><span>CSS</span>
+                            </div>
+                        </div>
+                        <div class="proj-content">
+                            <p class="proj-desc">
+                                A fully functional task management web application built with React.js featuring real-time add, delete, and update task capabilities. Designed with a clean, intuitive UI/UX to streamline user productivity and daily workflow organization. The app demonstrates solid React component architecture and state management using React Hooks.
+                            </p>
+                            <h4>Key Outcomes:</h4>
+                            <div class="outcomes-grid">
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">1</span>
+                                    <p>Delivered a responsive, interactive task management interface with instant UI updates and zero page reloads</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">2</span>
+                                    <p>Improved user productivity by simplifying task creation, editing, and deletion into a single unified view</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">3</span>
+                                    <p>Demonstrated proficiency in React.js component architecture, props, and useState/useEffect hooks</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">4</span>
+                                    <p>Produced a polished, minimal UI that prioritizes clarity and ease of use</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROJECT 2 -->
+                    <div class="project-card hidden">
+                        <div class="proj-panel-dark">
+                            <h3>Doctor Prescription Management System</h3>
+                            <span class="proj-type">In-Progress Project</span>
+                            <span class="proj-duration">2025 – Present</span>
+                            <div class="tech-pills">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Development</span>
+                            </div>
+                        </div>
+                        <div class="proj-content">
+                            <p class="proj-desc">
+                                A healthcare-focused web application designed to digitize and streamline prescription management for doctors and patients alike. The system targets a reduction in manual errors and improved accessibility of patient records through a secure, user-friendly interface. Future scope includes an integrated billing system and medicine inventory management module.
+                            </p>
+                            <h4>Key Outcomes:</h4>
+                            <div class="outcomes-grid">
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">1</span>
+                                    <p>Digitizing prescription workflows to eliminate paper-based inefficiencies and reduce transcription errors</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">2</span>
+                                    <p>Building secure storage and retrieval mechanisms for patient prescription records with a clean access interface</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">3</span>
+                                    <p>Designing a dual-role user interface accessible for both doctors and patients with minimal learning curve</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">4</span>
+                                    <p>Scoping future features including billing integration and medicine inventory to expand platform utility</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROJECT 3 -->
+                    <div class="project-card hidden">
+                        <div class="proj-panel-dark">
+                            <h3>MeatPulse – Event & Internship Platform</h3>
+                            <span class="proj-type">Personal Project</span>
+                            <span class="proj-duration">2025</span>
+                            <div class="tech-pills">
+                                <span>FastAPI</span><span>MongoDB</span><span>JWT</span><span>Python</span><span>REST API</span>
+                            </div>
+                        </div>
+                        <div class="proj-content">
+                            <p class="proj-desc">
+                                A full-featured backend platform for managing events and internship listings with dual-role support for Organizers and Seekers. The system implements secure JWT-based authentication, file upload capabilities, real-time notifications, and role-specific dashboards. Built with 18 production-ready REST APIs using FastAPI and MongoDB for scalable data management.
+                            </p>
+                            <h4>Key Outcomes:</h4>
+                            <div class="outcomes-grid">
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">1</span>
+                                    <p>Architected a scalable backend system with 18 REST APIs supporting Organizer and Seeker roles with distinct permissions and workflows</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">2</span>
+                                    <p>Implemented JWT authentication ensuring secure, stateless sessions and protected API endpoints</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">3</span>
+                                    <p>Built file upload, notification dispatch, and dashboard features for a complete, production-ready platform experience</p>
+                                </div>
+                                <div class="outcome-box hidden-outcome">
+                                    <span class="outcome-num">4</span>
+                                    <p>Demonstrated backend engineering expertise with FastAPI and MongoDB, covering routing, schemas, and database design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 6 - SKILLS -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <!-- CAT 1 -->
+                    <div class="skill-cat-card hidden-skill">
+                        <i class="fas fa-code cat-icon"></i>
+                        <h3>Programming Languages</h3>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>C</span><span class="skill-percent" data-target="80">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>C++</span><span class="skill-percent" data-target="83">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="83"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Java</span><span class="skill-percent" data-target="78">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="78"></div></div>
+                        </div>
+                    </div>
+                    <!-- CAT 2 -->
+                    <div class="skill-cat-card hidden-skill">
+                        <i class="fas fa-laptop-code cat-icon"></i>
+                        <h3>Frontend Web Development</h3>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>HTML / CSS</span><span class="skill-percent" data-target="90">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>JavaScript</span><span class="skill-percent" data-target="86">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="86"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>React.JS</span><span class="skill-percent" data-target="84">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="84"></div></div>
+                        </div>
+                    </div>
+                    <!-- CAT 3 -->
+                    <div class="skill-cat-card hidden-skill">
+                        <i class="fas fa-database cat-icon"></i>
+                        <h3>Backend & Databases</h3>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>FastAPI</span><span class="skill-percent" data-target="76">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="76"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>MongoDB</span><span class="skill-percent" data-target="75">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>MySQL</span><span class="skill-percent" data-target="78">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="78"></div></div>
+                        </div>
+                    </div>
+                    <!-- CAT 4 -->
+                    <div class="skill-cat-card hidden-skill">
+                        <i class="fas fa-tools cat-icon"></i>
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Git</span><span class="skill-percent" data-target="85">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>VS Code</span><span class="skill-percent" data-target="92">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>AI Tools (Claude, Grok)</span><span class="skill-percent" data-target="82">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="82"></div></div>
+                        </div>
+                    </div>
+                    <!-- CAT 5 -->
+                    <div class="skill-cat-card hidden-skill">
+                        <i class="fas fa-network-wired cat-icon"></i>
+                        <h3>CS Fundamentals</h3>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Data Structures & Algorithms</span><span class="skill-percent" data-target="83">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="83"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Database Management Systems</span><span class="skill-percent" data-target="79">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="79"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Object-Oriented Programming</span><span class="skill-percent" data-target="81">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="81"></div></div>
+                        </div>
+                    </div>
+                    <!-- CAT 6 -->
+                    <div class="skill-cat-card hidden-skill">
+                        <i class="fas fa-users cat-icon"></i>
+                        <h3>Soft Skills</h3>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Leadership</span><span class="skill-percent" data-target="88">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Public Speaking</span><span class="skill-percent" data-target="82">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="82"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Event Management</span><span class="skill-percent" data-target="85">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Writing</span><span class="skill-percent" data-target="80">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Time Management</span><span class="skill-percent" data-target="85">0%</span></div>
+                            <div class="progress-bar-bg"><div class="progress-bar" data-width="85"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 7 - CERTIFICATIONS -->
+        <section id="certifications" class="section certifications">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certs-grid">
+                    <div class="cert-card hidden-cert">
+                        <div class="cert-img-wrapper">
+                            <img src="certificates/cert_react_skilloceans.jpg.jpeg" alt="Web Applications Development using React JS">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Web Applications Development using React JS</h4>
+                            <span class="provider">Skilloceans</span>
+                            <span class="year">2024</span>
+                        </div>
+                    </div>
+                    <div class="cert-card hidden-cert">
+                        <div class="cert-img-wrapper">
+                            <embed src="certificates/cert_js_gfg.jpg.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        <div class="cert-info">
+                            <h4>JavaScript Programming – Self Paced</h4>
+                            <span class="provider">GeeksForGeeks</span>
+                            <span class="year">2024</span>
+                        </div>
+                    </div>
+                    <div class="cert-card hidden-cert">
+                        <div class="cert-img-wrapper">
+                            <embed src="certificates/cert_reactjs_gfg.jpg.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        <div class="cert-info">
+                            <h4>React JS Development – Self Paced</h4>
+                            <span class="provider">GeeksForGeeks</span>
+                            <span class="year">2024</span>
+                        </div>
+                    </div>
+                    <div class="cert-card hidden-cert">
+                        <div class="cert-img-wrapper">
+                            <img src="certificates/cert_ai_agent_google_gfg.jpg.png" alt="Build with AI Agent Builder Camp">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Build with AI Agent Builder Camp</h4>
+                            <span class="provider">Google for Developers × GeeksForGeeks</span>
+                            <span class="year">2024–2025</span>
+                        </div>
+                    </div>
+                    <div class="cert-card hidden-cert">
+                        <div class="cert-img-wrapper">
+                            <embed src="certificates/cert_genai_outskill.jpg.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Generative AI Mastermind Workshop</h4>
+                            <span class="provider">Outskill</span>
+                            <span class="year">2024–2025</span>
+                        </div>
+                    </div>
+                    <div class="cert-card hidden-cert">
+                        <div class="cert-img-wrapper">
+                            <embed src="certificates/cert_internship_wurkify.jpg.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Internship Certificate</h4>
+                            <span class="provider">Wurkify</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="cert-card hidden-cert">
+                        <div class="cert-img-wrapper">
+                            <img src="certificates/cert_campus_mantri_gfg.jpg.png" alt="Campus Mantri Certificate">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Campus Mantri Certificate</h4>
+                            <span class="provider">GeeksForGeeks</span>
+                            <span class="year">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 8 - ACHIEVEMENTS -->
+        <section id="achievements" class="section achievements">
+            <div class="container">
+                <h2 class="section-title">Achievements & Recognition</h2>
+                <p class="achievements-sub">Milestones earned through dedication, community leadership, and a relentless pursuit of technical excellence.</p>
+                
+                <div class="stats-counter">
+                    <div class="stat-item hidden-stat">
+                        <span class="stat-num" data-val="1">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item hidden-stat">
+                        <span class="stat-num" data-val="7">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat-item hidden-stat">
+                        <span class="stat-num" data-val="3">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item hidden-stat">
+                        <span class="stat-num" data-val="2">0</span>
+                        <span class="stat-label">Awards</span>
+                    </div>
+                </div>
+
+                <div class="achieve-grid">
+                    <!-- ACH 1 -->
+                    <div class="achieve-card hidden-achieve">
+                        <div class="achieve-img-box">
+                            <embed src="achievements/cert_internship_wurkify.jpg.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        <div class="achieve-content">
+                            <div class="achieve-badge"><i class="fas fa-trophy"></i> Professional</div>
+                            <h3>Software Testing Intern</h3>
+                            <span class="achieve-inst">Wurkify | 2025</span>
+                            <p>Successfully completed a software testing internship at Wurkify, gaining hands-on experience in manual testing, test case design, structured bug documentation, and SDLC/STLC methodologies across live web applications.</p>
+                        </div>
+                    </div>
+                    <!-- ACH 2 -->
+                    <div class="achieve-card hidden-achieve">
+                        <div class="achieve-img-box">
+                            <img src="achievements/cert_campus_mantri_gfg.jpg.png" alt="GeeksforGeeks Campus Mantri">
+                        </div>
+                        <div class="achieve-content">
+                            <div class="achieve-badge"><i class="fas fa-award"></i> Academic / Community</div>
+                            <h3>GeeksforGeeks Campus Mantri</h3>
+                            <span class="achieve-inst">GeeksforGeeks | 2024</span>
+                            <p>Appointed as the official GFG Campus Mantri for MITRC, Alwar — recognized for demonstrated leadership in promoting DSA culture, organizing campus coding events, and growing the student tech community.</p>
+                        </div>
+                    </div>
+                    <!-- ACH 3 -->
+                    <div class="achieve-card hidden-achieve">
+                        <div class="achieve-img-box">
+                            <img src="achievements/cert_ai_agent_google_gfg.jpg.png" alt="AI Agent Builder Camp Participant">
+                        </div>
+                        <div class="achieve-content">
+                            <div class="achieve-badge"><i class="fas fa-trophy"></i> Professional</div>
+                            <h3>AI Agent Builder Camp Participant</h3>
+                            <span class="achieve-inst">Google for Developers × GeeksForGeeks | 2024–2025</span>
+                            <p>Selected to participate in the prestigious Build with AI Agent Builder Camp, gaining hands-on exposure to building AI-powered agents using Google's developer ecosystem and modern AI tooling.</p>
+                        </div>
+                    </div>
+                    <!-- ACH 4 -->
+                    <div class="achieve-card hidden-achieve">
+                        <div class="achieve-img-box">
+                            <embed src="achievements/cert_genai_outskill.jpg.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        <div class="achieve-content">
+                            <div class="achieve-badge"><i class="fas fa-trophy"></i> Professional</div>
+                            <h3>Generative AI Mastermind</h3>
+                            <span class="achieve-inst">Outskill | 2024–2025</span>
+                            <p>Completed the Generative AI Mastermind Workshop, deepening expertise in large language models, prompt engineering, and the practical application of generative AI in real-world product development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 9 - CONTACT -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title">Let's Build Something Together</h2>
+                <div class="contact-wrapper">
+                    <!-- LEFT COLUMN -->
+                    <div class="contact-left hidden-contact-l">
+                        <form class="contact-form" action="mailto:Vinayaksharma2289@gmail.com" method="post" enctype="text/plain">
+                            <div class="input-group">
+                                <input type="text" id="name" name="Name" required>
+                                <label for="name">Full Name</label>
+                                <div class="underline"></div>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="Email" required>
+                                <label for="email">Email Address</label>
+                                <div class="underline"></div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="subject" name="Subject" required>
+                                <label for="subject">Subject</label>
+                                <div class="underline"></div>
+                            </div>
+                            <div class="input-group textarea-group">
+                                <textarea id="message" name="Message" rows="5" required></textarea>
+                                <label for="message">Message</label>
+                                <div class="underline"></div>
+                            </div>
+                            <button type="submit" class="btn-send">
+                                <span>Send Message</span>
+                                <div class="shimmer"></div>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- RIGHT COLUMN -->
+                    <div class="contact-right hidden-contact-r">
+                        <div class="contact-info-panel">
+                            <h3>Contact Information</h3>
+                            <div class="info-row">
+                                <i class="fas fa-envelope"></i>
+                                <span>Vinayaksharma2289@gmail.com</span>
+                            </div>
+                            <div class="info-row">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+91-8740007342</span>
+                            </div>
+                            <div class="info-row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Alwar, Rajasthan, India</span>
+                            </div>
+                            <div class="social-links-footer">
+                                <a href="https://linkedin.com/in/Vinayak2922k" target="_blank" class="social-row">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://github.com/Vinayak2922k" target="_blank" class="social-row">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <h2>Vinayak Sharma</h2>
+            <p>Building the Future, One Line of Code at a Time</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Vinayak2922k" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Vinayak2922k" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:Vinayaksharma2289@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">© 2026 Vinayak Sharma. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
