@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hoverElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursorOutline.style.backgroundColor = 'rgba(245, 166, 35, 0.1)';
+                cursorOutline.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
             });
             el.addEventListener('mouseleave', () => {
                 cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
@@ -39,12 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
     // Close menu when link is clicked
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
+            document.body.style.overflow = '';
         });
     });
 
@@ -135,33 +137,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 5. Certification Card 3D Tilt Effect
-    const certCards = document.querySelectorAll('.cert-card');
-    
-    certCards.forEach(card => {
-        // Initial random tilt effect as requested (-2 to +2 deg)
-        const randomRot = (Math.random() * 4) - 2;
-        card.style.transform = `translateY(0) rotate(${randomRot}deg)`;
+    if (window.innerWidth > 768) {
+        const certCards = document.querySelectorAll('.cert-card');
+        
+        certCards.forEach(card => {
+            // Initial random tilt effect as requested (-2 to +2 deg)
+            const randomRot = (Math.random() * 4) - 2;
+            card.style.transform = `translateY(0) rotate(${randomRot}deg)`;
 
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            // max rotation 4deg
-            const rotateX = ((y - centerY) / centerY) * -4; 
-            const rotateY = ((x - centerX) / centerX) * 4;
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // max rotation 4deg
+                const rotateX = ((y - centerY) / centerY) * -4; 
+                const rotateY = ((x - centerX) / centerX) * 4;
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                // Snap back flat
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            });
         });
-
-        card.addEventListener('mouseleave', () => {
-            // Snap back flat
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
-        });
-    });
+    }
 
     // 6. Smooth Scrolling for Anchor Links (already handled mostly by CSS but good for offset)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
