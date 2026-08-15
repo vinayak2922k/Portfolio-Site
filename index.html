@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="chatbot-widget.css">
 </head>
 <body>
     <!-- Custom Cursor -->
@@ -66,7 +67,7 @@
                     </p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn btn-view-work">View Work</a>
-                        <a href="#about" class="btn btn-play-circle"><i class="fas fa-play"></i></a>
+                        <a href="#about" class="btn btn-play-circle" aria-label="Play about section" title="About Me"><i class="fas fa-play"></i></a>
                     </div>
                 </div>
                 <div class="landing-img-col">
@@ -707,10 +708,10 @@
                                 <span>Alwar, Rajasthan, India</span>
                             </div>
                             <div class="social-links-footer">
-                                <a href="https://linkedin.com/in/Vinayak2922k" target="_blank" class="social-row">
+                                <a href="https://linkedin.com/in/Vinayak2922k" target="_blank" rel="noopener noreferrer" class="social-row">
                                     <i class="fab fa-linkedin"></i> LinkedIn
                                 </a>
-                                <a href="https://github.com/Vinayak2922k" target="_blank" class="social-row">
+                                <a href="https://github.com/Vinayak2922k" target="_blank" rel="noopener noreferrer" class="social-row">
                                     <i class="fab fa-github"></i> GitHub
                                 </a>
                             </div>
@@ -726,14 +727,19 @@
             <h2>Vinayak Sharma</h2>
             <p>Building the Future, One Line of Code at a Time</p>
             <div class="footer-socials">
-                <a href="https://github.com/Vinayak2922k" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/Vinayak2922k" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:Vinayaksharma2289@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Vinayak2922k" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Vinayak2922k" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:Vinayaksharma2289@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
             <p class="copyright">© 2026 Vinayak Sharma. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+  window.PORTFOLIO_CHATBOT_CONFIG = { apiUrl: "http://localhost:3001/api/chat" };
+</script>
+<script src="chatbot-widget.js"></script>
 </body>
 </html>
