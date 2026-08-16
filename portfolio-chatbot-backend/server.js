@@ -24,7 +24,11 @@ const { withRetry } = require("./utils/retry");
 
 const PORT = process.env.PORT || 3001;
 const MODEL_NAME = process.env.MODEL_NAME || "gemini-3.6-flash";
-const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || "*";
+// Comma-separated list, e.g. "https://vinayak2922k.github.io,http://127.0.0.1:5500"
+const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGIN || "*")
+  .split(",")
+  .map((o) => o.trim())
+  .filter(Boolean);
 const MAX_MESSAGE_LENGTH = 500;
 const MAX_HISTORY_TURNS = 6; // how many prior messages to keep for context
 
@@ -37,7 +41,19 @@ if (!process.env.GEMINI_API_KEY) {
 const ai = process.env.GEMINI_API_KEY ? new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }) : null;
 
 const app = express();
-app.use(cors({ origin: ALLOWED_ORIGIN }));
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Requests with no Origin header (curl, server-to-server, health checks)
+      // are allowed through; browser requests must match the allowlist.
+      if (!origin || ALLOWED_ORIGINS.includes("*") || ALLOWED_ORIGINS.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS: " + origin));
+      }
+    },
+  })
+);
 app.use(express.json({ limit: "10kb" }));
 
 // Basic per-IP rate limiting: 20 messages per minute.

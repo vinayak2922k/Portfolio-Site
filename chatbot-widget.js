@@ -5,11 +5,17 @@
  * Tailwind. Drop this file + chatbot-widget.css into your project and
  * include both in index.html (see integration instructions in the README).
  *
- * Configure the backend URL BEFORE this script tag by setting:
+ * Configure BEFORE this script tag by setting:
  *   <script>
- *     window.PORTFOLIO_CHATBOT_CONFIG = { apiUrl: "https://your-backend.com/api/chat" };
+ *     window.PORTFOLIO_CHATBOT_CONFIG = {
+ *       apiUrl: "https://your-backend.com/api/chat",
+ *       botName: "Vinayak's Assistant",         // optional, shown in the header
+ *       botSubtitle: "Ask about his portfolio", // optional, shown under the name
+ *       avatarUrl: "profile_photo.jpg.jpeg"     // optional, path/URL to a real photo
+ *     };
  *   </script>
- * If omitted, it defaults to http://localhost:3001/api/chat for local testing.
+ * Any field you omit falls back to a sensible default (apiUrl defaults to
+ * http://localhost:3001/api/chat, avatarUrl falls back to text initials).
  */
 (function () {
   "use strict";
@@ -17,6 +23,9 @@
   function init() {
     var CONFIG = window.PORTFOLIO_CHATBOT_CONFIG || {};
     var API_URL = CONFIG.apiUrl || "http://localhost:3001/api/chat";
+    var BOT_NAME = CONFIG.botName || "Vinayak's Assistant";
+    var BOT_SUBTITLE = CONFIG.botSubtitle || "Ask about his portfolio";
+    var AVATAR_URL = CONFIG.avatarUrl || null;
 
     var GREETING =
       "Hi! I'm Vinayak's portfolio assistant. Ask me anything about his education, projects, skills, or experience.";
@@ -32,6 +41,41 @@
       messages: [{ role: "assistant", content: GREETING, suggestions: DEFAULT_CHIPS }],
     };
 
+    function initials(name) {
+      var parts = String(name || "").trim().split(/\s+/);
+      var chars = parts.slice(0, 2).map(function (p) {
+        return p.charAt(0).toUpperCase();
+      });
+      return chars.join("") || "AI";
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    function avatarInnerHTML() {
+      if (AVATAR_URL) {
+        return '<img src="' + escapeHtml(AVATAR_URL) + '" alt="' + escapeHtml(BOT_NAME) + '">';
+      }
+      return escapeHtml(initials(BOT_NAME));
+    }
+
+    function fabContent(isOpen) {
+      if (isOpen) return closeIconSVG();
+      if (AVATAR_URL) {
+        return (
+          '<img class="pc-fab-avatar" src="' +
+          escapeHtml(AVATAR_URL) +
+          '" alt="' +
+          escapeHtml(BOT_NAME) +
+          '">'
+        );
+      }
+      return chatIconSVG();
+    }
+
     // ---- Build DOM ----
     var root = document.createElement("div");
     root.className = "pc-chatbot-root";
@@ -41,7 +85,7 @@
     fab.type = "button";
     fab.className = "pc-fab";
     fab.setAttribute("aria-label", "Open portfolio chat");
-    fab.innerHTML = chatIconSVG();
+    fab.innerHTML = fabContent(false);
     root.appendChild(fab);
 
     var panel = document.createElement("div");
@@ -51,10 +95,16 @@
     panel.style.display = "none";
     panel.innerHTML =
       '<div class="pc-header">' +
-      '<div class="pc-avatar">VS</div>' +
+      '<div class="pc-avatar">' +
+      avatarInnerHTML() +
+      "</div>" +
       '<div class="pc-header-text">' +
-      '<p class="pc-title">Vinayak&#39;s Assistant</p>' +
-      '<p class="pc-subtitle">Ask about his portfolio</p>' +
+      '<p class="pc-title">' +
+      escapeHtml(BOT_NAME) +
+      "</p>" +
+      '<p class="pc-subtitle">' +
+      escapeHtml(BOT_SUBTITLE) +
+      "</p>" +
       "</div>" +
       '<button type="button" class="pc-close" aria-label="Close chat">&times;</button>' +
       "</div>" +
@@ -77,7 +127,7 @@
     function toggle(open) {
       state.open = open !== undefined ? open : !state.open;
       panel.style.display = state.open ? "flex" : "none";
-      fab.innerHTML = state.open ? closeIconSVG() : chatIconSVG();
+      fab.innerHTML = fabContent(state.open);
       fab.setAttribute("aria-label", state.open ? "Close portfolio chat" : "Open portfolio chat");
       if (state.open) {
         inputEl.focus();
