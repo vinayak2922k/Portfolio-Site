@@ -94,6 +94,20 @@ function toGeminiContents(history, latestMessage) {
   }));
 }
 
+// Safety net: strip common markdown syntax in case the model uses it anyway,
+// since the widget renders plain text, not markdown. Also normalizes spacing
+// so list-style answers get a blank line between items.
+function stripMarkdown(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "$1") // **bold**
+    .replace(/__(.*?)__/g, "$1") // __bold__
+    .replace(/(?<!\*)\*(?!\*)(.*?)\*(?!\*)/g, "$1") // *italic*
+    .replace(/^#{1,6}\s+/gm, "") // # headings
+    .replace(/^([ \t]*)[-*+][ \t]+/gm, "\n$1") // turn bullet lines into their own blank-line-separated paragraph
+    .replace(/\n{3,}/g, "\n\n") // collapse excess blank lines
+    .trim();
+}
+
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
 });
@@ -128,7 +142,7 @@ app.post("/api/chat", chatLimiter, async (req, res) => {
       })
     );
 
-    const reply = (response.text || "").trim();
+    const reply = stripMarkdown((response.text || "").trim());
     const isFallback = FALLBACK_PATTERN.test(reply);
     const suggestions = isFallback
       ? pickFallbackSuggestions()
